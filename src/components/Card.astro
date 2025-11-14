@@ -2,10 +2,12 @@
 const { data } = Astro.props;
 ---
 
-<section>
-  <img src=`https://yvsqeurljhxwfykzgfyb.supabase.co/storage/v1/object/public/Toki_images/${data.image}` alt="case image" />
-  <h2>{data.casename}</h2>
-</section>
+<a href=`/single/${data.id}`>
+  <section>
+    <img src=`https://yvsqeurljhxwfykzgfyb.supabase.co/storage/v1/object/public/Toki_images/${data.image}` alt="case image" />
+    <h2>{data.casename}</h2>
+  </section>
+</a>
 
 <style>
   img {

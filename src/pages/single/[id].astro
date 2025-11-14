@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const endpoint = "https://yvsqeurljhxwfykzgfyb.supabase.co/rest/v1/Toki?select=*";
+  const key = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl2c3FldXJsamh4d2Z5a3pnZnliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5Nzc0ODMsImV4cCI6MjA3ODU1MzQ4M30.tQHxzSel-Iqvcvuh9XBVKsvHr-oNSd8XLUyhsGABUGo`;
+
+  const options = {
+    method: "GET",
+    headers: {
+      apikey: key,
+    },
+  };
+  const response = await fetch(endpoint, options);
+  const data = await response.json();
+
+  return data.map((post) => {
+    return {
+      params: { id: post.id },
+      props: { post },
+    };
+  });
+}
+
+const { id } = Astro.params;
+const { post } = Astro.props;
+---
+
+<!-- indhold til undersiderne -->
+<Layout>
+  <h1>{post.casename}</h1>
+</Layout>
