@@ -29,4 +29,11 @@ const { post } = Astro.props;
 <!-- indhold til undersiderne -->
 <Layout>
   <h1>{post.casename}</h1>
+  <img src=`https://yvsqeurljhxwfykzgfyb.supabase.co/storage/v1/object/public/Toki_images/${post.image}` alt="case image" />
+  <h2>THE PROBLEM</h2>
+  <p>{post.problem}</p>
+  <h2>SOLUTION</h2>
+  <p>{post.solution}</p>
+  <h2>RESULTS</h2>
+  <p>{post.results}</p>
 </Layout>
