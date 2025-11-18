@@ -1,16 +1,17 @@
   ---
   const currentPath = Astro.url.pathname;
+  import "../css/main.css";
   ---
   
   <header>
     <nav>
       <div class="logo">
-            <img src="/logo.svg" alt="Toki House Logo">
+            <img src="/logo.svg" alt="Toki House Logo" width="500%">
         </div>
       <div class="navbar">
-      <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+      <a href="/" class={currentPath === '/' ? 'active' : ''}>HOME</a>
       <a href="/cases" class={currentPath === '/cases' || currentPath === '/cases/' ? 'active' : ''}>CASES</a>
-      <a href="/toki-flow" class={currentPath === '/toki-flow' || currentPath === '/toki-flow/' ? 'active' : ''}>TOKI FLOW</a>
+      <a href="/toki-flow" class={currentPath === '/toki-flow' || currentPath === '/toki-flow/' ? 'active' : ''}>TÓKI FLOW</a>
       <a href="/contact" class={currentPath === '/contact' || currentPath === '/contact/' ? 'active' : ''}>CONTACT</a>
       </div>
     </nav>
@@ -47,6 +48,7 @@
         margin: 0;
         padding: 0;
         align-items: center;
+        font-family: JosefinSans;
     }
 
     nav a {
