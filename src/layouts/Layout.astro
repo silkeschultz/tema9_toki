@@ -1,5 +1,4 @@
 ---
-import Header from "./Header.astro";
 import "../css/main.css";
 ---
 
@@ -12,7 +11,23 @@ import "../css/main.css";
     <title>TÓKI House</title>
   </head>
   <body>
-    <Header />
     <slot />
   </body>
 </html>
+
+
+<style is:global>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden; 
+    }
+</style>
