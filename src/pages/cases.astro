@@ -17,9 +17,28 @@ console.log(data);
 ---
 
 <Layout>
-  <Header />
-  <h1>Previous Cases</h1>
-  {data.map((caseItem) => <Card data={caseItem} />)}
+  <section>
+    <h1>Previous Cases</h1>
+    <section class="case-grid">
+      {data.map((caseItem) => <Card data={caseItem} />)}
+    </section>
+  </section>
 </Layout>
 
-<style></style>
+<style>
+  section {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem 0;
+  }
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+</style>
