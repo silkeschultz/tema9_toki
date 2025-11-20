@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Martel";
-  src: url(...);
-}
+    font-family: 'JosefinSans';
+    src: url(public/fonts/JosefinSans-VariableFont_wght.ttf);
+
 @font-face {
   font-family: "Yantramanav";
   src: url();
