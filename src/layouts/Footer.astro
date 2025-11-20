@@ -52,7 +52,7 @@ import "../css/main.css";
   </div>
 
   <div class="footer-logo">
-    <img src="/logo.svg" alt="Toki House Logo" width="500%" />
+    <img src="/footer.LOGO.svg" alt="Toki House Logo" width="500%" />
   </div>
 </footer>
 
@@ -64,8 +64,14 @@ import "../css/main.css";
     grid-template-columns: repeat(4, minmax(0, 1fr));
     padding: 40px;
     justify-content: center;
+    justify-items: center;
+    line-height: 1.2;
   }
   .footer-column {
+    text-align: left;
+  }
+  .footer-column ul li {
+    line-height: 1.5;
   }
   .footer-column ul {
     list-style-type: none;
@@ -81,5 +87,14 @@ import "../css/main.css";
   .footer-logo {
     display: flex;
     justify-content: center;
+    grid-column: 1 / -1;
+  }
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+  }
+  h3 {
+    line-height: 1.8;
   }
 </style>
